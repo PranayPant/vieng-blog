@@ -11,10 +11,8 @@ export default function Nav({ className }: NavProps) {
         className
       )}
     >
-      <div>
-        <span>DIS LLC</span>
-      </div>
-      <ul className="flex gap-3">
+      <span className="self-center">DIS LLC</span>
+      <ul className="hidden md:flex gap-3">
         <li>
           <a href="#about">About Us</a>
         </li>
@@ -25,6 +23,13 @@ export default function Nav({ className }: NavProps) {
           <a href="#accomplishments">Accomplishments</a>
         </li>
       </ul>
+      <div id="hamburger-menu" className="block md:hidden self-center">
+        <div className="w-6 flex flex-col gap-1">
+          <div className="h-0.5 bg-slate-500 rounded"></div>
+          <div className="h-0.5 bg-slate-500 rounded"></div>
+          <div className="h-0.5 bg-slate-500 rounded"></div>
+        </div>
+      </div>
     </nav>
   )
 }
